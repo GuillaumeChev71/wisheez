@@ -3,7 +3,7 @@ app OpenSaaS {
     version: "^0.15.0"
   },
 
-  title: "My Open SaaS App",
+  title: "Wisheez",
 
   head: [
     "<meta charset='utf-8' />",

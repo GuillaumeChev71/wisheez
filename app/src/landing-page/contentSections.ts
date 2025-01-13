@@ -12,53 +12,55 @@ export const landingPageNavigationItems: NavigationItem[] = [
 ];
 export const features = [
   {
-    name: 'Cool Feature #1',
-    description: 'Describe your cool feature here.',
-    icon: '🤝',
-    href: DocsUrl,
+    name: "Créer une liste",
+    description: "Ajoutez facilement des idées de cadeaux pour toutes les occasions.",
+    icon: "🎁",
+    href: "/create-list",
   },
   {
-    name: 'Cool Feature #2',
-    description: 'Describe your cool feature here.',
-    icon: '🔐',
-    href: DocsUrl,
+    name: "Partager avec vos proches",
+    description: "Envoyez vos listes à votre famille et vos amis en quelques clics.",
+    icon: "🔗",
+    href: "/share-list",
   },
   {
-    name: 'Cool Feature #3',
-    description: 'Describe your cool feature here.',
-    icon: '🥞',
-    href: DocsUrl,
+    name: "Organiser vos idées",
+    description: "Classez vos idées de cadeaux par catégories pour plus de clarté.",
+    icon: "📂",
+    href: "/organize",
   },
   {
-    name: 'Cool Feature #4',
-    description: 'Describe your cool feature here.',
-    icon: '💸',
-    href: DocsUrl,
+    name: "Recevoir des suggestions",
+    description: "Laissez vos proches contribuer à vos listes en ajoutant leurs idées.",
+    icon: "💡",
+    href: "/suggestions",
   },
 ];
 export const testimonials = [
   {
-    name: 'Da Boi',
-    role: 'Wasp Mascot',
-    avatarSrc: daBoiAvatar,
-    socialUrl: 'https://twitter.com/wasplang',
-    quote: "I don't even know how to code. I'm just a plushie.",
+    name: "Vieux barbu",
+    role: "Livraison de Noël",
+    emoji: "🎅",
+    socialUrl: "https://northpole.com",
+    quote: "Trop bien, pas de doublons cette année pendant ma tournée ! Merci Wisheez, je peux enfin livrer mes cadeaux tranquille. 🎁✨",
   },
   {
-    name: 'Mr. Foobar',
-    role: 'Founder @ Cool Startup',
-    avatarSrc: avatarPlaceholder,
-    socialUrl: '',
-    quote: 'This product makes me cooler than I already am.',
+    name: "Un papa",
+    role: "Anniversaire de ma fille",
+    emoji: "🎂",
+    socialUrl: "https://birthdayplanner.com",
+    quote: "Avec Wisheez, pas de stress pour trouver les cadeaux parfaits pour ma fille. Les invités m'ont remercié... et elle aussi ! 🎉🎈",
   },
   {
-    name: 'Jamie',
-    role: 'Happy Customer',
-    avatarSrc: avatarPlaceholder,
-    socialUrl: '#',
-    quote: 'My cats love it!',
+    name: "Rookies du babyphone",
+    role: "Naissance de mon fils",
+    emoji: "🍼",
+    socialUrl: "https://newparentclub.com",
+    quote: "Grâce à Wisheez, on a reçu pile ce dont on avait besoin pour notre bébé. Fini les 3 chauffe-biberons inutiles. Merci ! 👶🛏️",
   },
 ];
+
+
 
 export const faqs = [
   {
