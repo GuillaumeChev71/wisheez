@@ -18,7 +18,8 @@ export default function Testimonials({ testimonials }: { testimonials: Testimoni
             {testimonials.map((testimonial, idx) => (
               <figure
                 key={idx}
-                className='w-full lg:w-1/4 box-content flex flex-col justify-between p-8 rounded-xl bg-gray-500/5'
+                className='w-full box-content flex flex-col justify-between p-8 rounded-xl bg-gray-500/5'
+                style={ { width: '24%'} }
               >
                 <blockquote className='text-lg text-white sm:text-md sm:leading-8'>
                   <p>"{testimonial.quote}"</p>
