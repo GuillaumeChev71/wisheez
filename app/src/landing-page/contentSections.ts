@@ -65,9 +65,45 @@ export const testimonials = [
 export const faqs = [
   {
     id: 1,
-    question: 'Whats the meaning of life?',
-    answer: '42.',
-    href: 'https://en.wikipedia.org/wiki/42_(number)',
+    question: "Comment créer une liste de cadeaux pour une occasion spéciale ?",
+    answer:
+      "Pour créer une liste, connectez-vous à votre compte, cliquez sur 'Créer une liste', choisissez l'occasion (Noël, anniversaire, etc.) et ajoutez vos idées de cadeaux.",
+    href: "#",
+  },
+  {
+    id: 2,
+    question: "Puis-je partager ma liste de cadeaux avec mes amis et ma famille ?",
+    answer:
+      "Oui, chaque liste a un lien unique que vous pouvez envoyer par email, sur les réseaux sociaux ou via une messagerie instantanée.",
+    href: "#",
+  },
+  {
+    id: 3,
+    question: "Que se passe-t-il si quelqu'un réserve un cadeau de ma liste ?",
+    answer:
+      "Lorsqu'un cadeau est réservé, il est automatiquement marqué comme 'Réservé', afin d'éviter les doublons. Cependant, vous ne saurez pas qui l'a réservé, pour garder la surprise.",
+    href: "#",
+  },
+  {
+    id: 4,
+    question: "L'application est-elle gratuite ?",
+    answer:
+      "Oui, Wisheez est entièrement gratuit à utiliser pour créer et partager vos listes de cadeaux. Certaines options premium pourraient être disponibles ultérieurement.",
+    href: "#",
+  },
+  {
+    id: 5,
+    question: "Puis-je ajouter des liens vers des boutiques en ligne pour mes cadeaux ?",
+    answer:
+      "Absolument ! Vous pouvez inclure des liens directs vers des produits en ligne afin que vos proches sachent où les acheter.",
+    href: "#",
+  },
+  {
+    id: 6,
+    question: "Comment fonctionnent les liens d'affiliation sur Wisheez ?",
+    answer:
+      "Lorsque vous ajoutez un lien vers une boutique en ligne et que celle-ci fait partie de notre réseau d'affiliation, nous transformons automatiquement ce lien en un lien d'affiliation Wisheez. Cela nous permet de financer l'application sans coût supplémentaire pour vous. Vous continuez d'utiliser la plateforme gratuitement tout en soutenant son développement.",
+    href: "#affiliation",
   },
 ];
 export const footerNavigation = {
