@@ -45,7 +45,7 @@ export const testimonials = [
     quote: "Trop bien, pas de doublons cette année pendant ma tournée ! Merci Wisheez, je peux enfin livrer mes cadeaux tranquille. 🎁✨",
   },
   {
-    name: "Un papa",
+    name: "Un papa forcé",
     role: "Anniversaire de ma fille",
     emoji: "🎂",
     socialUrl: "https://birthdayplanner.com",
