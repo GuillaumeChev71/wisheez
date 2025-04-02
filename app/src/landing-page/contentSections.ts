@@ -5,10 +5,7 @@ import daBoiAvatar from '../client/static/da-boi.webp';
 import avatarPlaceholder from '../client/static/avatar-placeholder.webp';
 
 export const landingPageNavigationItems: NavigationItem[] = [
-  { name: 'Features', to: '#features' },
-  { name: 'Pricing', to: routes.PricingPageRoute.to },
-  { name: 'Documentation', to: DocsUrl },
-  { name: 'Blog', to: BlogUrl },
+  
 ];
 export const features = [
   {
@@ -108,12 +105,11 @@ export const faqs = [
 ];
 export const footerNavigation = {
   app: [
-    { name: 'Documentation', href: DocsUrl },
-    { name: 'Blog', href: BlogUrl },
+    { name: 'Blog', href: '#' },
   ],
-  company: [
-    { name: 'About', href: 'https://wasp-lang.dev' },
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms of Service', href: '#' },
+  legal: [
+    { name: 'Conditions Générales', href: '#' },
+    { name: 'Politique de Confidentialité', href: '#' },
+    { name: 'Cookies', href: '#' },
   ],
 };

@@ -6,7 +6,7 @@ interface NavigationItem {
 export default function Footer({ footerNavigation }: {
   footerNavigation: {
     app: NavigationItem[]
-    company: NavigationItem[]
+    legal: NavigationItem[]
   }
 }) {
   return (
@@ -31,35 +31,15 @@ export default function Footer({ footerNavigation }: {
                 </ul>
               </div>
               <div className="col-span-1">
-                <p className="font-medium text-yellow-500">Entreprise</p>
+                <p className="font-medium text-yellow-500">Légal</p>
                 <ul className="mt-6 space-y-4 text-sm">
-                  {footerNavigation.company.map((item) => (
+                  {footerNavigation.legal.map((item) => (
                     <li key={item.name}>
                       <a href={item.href} className="text-gray-500 dark:text-white transition hover:opacity-75">
                         {item.name}
                       </a>
                     </li>
                   ))}
-                </ul>
-              </div>
-              <div className="col-span-1">
-                <p className="font-medium text-yellow-500">Légal</p>
-                <ul className="mt-6 space-y-4 text-sm">
-                  <li>
-                    <a href="#" className="text-gray-500 dark:text-white transition hover:opacity-75">
-                      Conditions Générales
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-gray-500 dark:text-white transition hover:opacity-75">
-                      Politique de Confidentialité
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-gray-500 dark:text-white transition hover:opacity-75">
-                      Cookies
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>
