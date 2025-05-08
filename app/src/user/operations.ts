@@ -5,7 +5,6 @@ import {
 } from 'wasp/server/operations';
 import { type User } from 'wasp/entities';
 import { HttpError } from 'wasp/server';
-import { type SubscriptionStatus } from '../payment/plans';
 
 export const updateUserById: UpdateUserById<{ id: string; data: Partial<User> }, User> = async (
   { id, data },
@@ -47,7 +46,6 @@ type GetPaginatedUsersInput = {
   cursor?: number | undefined;
   emailContains?: string;
   isAdmin?: boolean;
-  subscriptionStatus?: SubscriptionStatus[];
 };
 type GetPaginatedUsersOutput = {
   users: Pick<User, 'id' | 'email' | 'username' | 'lastActiveTimestamp' | 'subscriptionStatus' | 'paymentProcessorUserId'>[];
@@ -62,9 +60,7 @@ export const getPaginatedUsers: GetPaginatedUsers<GetPaginatedUsersInput, GetPag
     throw new HttpError(401);
   }
 
-  const allSubscriptionStatusOptions = args.subscriptionStatus as Array<string | null> | undefined;
-  const hasNotSubscribed = allSubscriptionStatusOptions?.find((status) => status === null) 
-  let subscriptionStatusStrings = allSubscriptionStatusOptions?.filter((status) => status !== null) as string[] | undefined
+  
 
   const queryResults = await context.entities.User.findMany({
     skip: args.skip,
@@ -77,21 +73,7 @@ export const getPaginatedUsers: GetPaginatedUsers<GetPaginatedUsersInput, GetPag
             mode: 'insensitive',
           },
           isAdmin: args.isAdmin,
-        },
-        {
-          OR: [
-            {
-              subscriptionStatus: {
-                in: subscriptionStatusStrings,
-              },
-            },
-            {
-              subscriptionStatus: {
-                equals: hasNotSubscribed,
-              },
-            },
-          ],
-        },
+        }
       ],
     },
     select: {
@@ -117,21 +99,7 @@ export const getPaginatedUsers: GetPaginatedUsers<GetPaginatedUsersInput, GetPag
             mode: 'insensitive',
           },
           isAdmin: args.isAdmin,
-        },
-        {
-          OR: [
-            {
-              subscriptionStatus: {
-                in: subscriptionStatusStrings,
-              },
-            },
-            {
-              subscriptionStatus: {
-                equals: hasNotSubscribed,
-              },
-            },
-          ],
-        },
+        }
       ],
     },
   });

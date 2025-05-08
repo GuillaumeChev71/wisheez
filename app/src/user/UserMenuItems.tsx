@@ -8,7 +8,7 @@ import { cn } from '../client/cn';
 export const UserMenuItems = ({ user, setMobileMenuOpen }: { user?: Partial<User>; setMobileMenuOpen?: any }) => {
   const path = window.location.pathname;
   const landingPagePath = routes.LandingPageRoute.to;
-  const adminDashboardPath = routes.AdminRoute.to;
+
 
   const handleMobileMenuClick = () => {
     if (setMobileMenuOpen) setMobileMenuOpen(false);
@@ -17,10 +17,7 @@ export const UserMenuItems = ({ user, setMobileMenuOpen }: { user?: Partial<User
   return (
     <>
       <ul
-        className={cn('flex flex-col gap-5 border-b border-stroke py-4 dark:border-strokedark', {
-          'sm:px-6': path !== adminDashboardPath,
-          'px-6': path === adminDashboardPath,
-        })}
+        className={cn('flex flex-col gap-5 border-b border-stroke py-4 dark:border-strokedark sm:px-6')}
       >
 
         <li>
@@ -50,33 +47,10 @@ export const UserMenuItems = ({ user, setMobileMenuOpen }: { user?: Partial<User
           </WaspRouterLink>
         </li>
       </ul>
-      {!!user && user.isAdmin && (
-        <ul
-          className={cn('flex flex-col gap-5 border-b border-stroke py-4 dark:border-strokedark', {
-            'sm:px-6': path !== adminDashboardPath,
-            'px-6': path === adminDashboardPath,
-          })}
-        >
-          <li className='flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-yellow-500'>
-            <WaspRouterLink
-              to={routes.AdminRoute.to}
-              onClick={handleMobileMenuClick}
-              className='flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-yellow-500'
-            >
-              <TfiDashboard size='1.1rem' />
-              Admin Dashboard
-            </WaspRouterLink>
-          </li>
-        </ul>
-      )}
       <button
         onClick={() => logout()}
         className={cn(
-          'flex items-center gap-3.5 py-4 text-sm font-medium duration-300 ease-in-out hover:text-yellow-500',
-          {
-            'sm:px-6': path !== adminDashboardPath,
-            'px-6': path === adminDashboardPath,
-          }
+          'flex items-center gap-3.5 py-4 text-sm font-medium duration-300 ease-in-out hover:text-yellow-500 sm:px-6'
         )}
       >
         <svg
